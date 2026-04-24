@@ -9,7 +9,9 @@ You should aim for a solution with O(n) time and O(n) space, where n is the size
 
 """
 
-        
+
+# //////////////// UNOPTIMIZED APPROACH - O(n^2) time and O(n) space ////////////////
+'''
 def sorter( d):
         nums = list(d.keys())
         for i in range(len(nums)-1):
@@ -30,6 +32,7 @@ def topKFrequent(nums, k):
         final = sorted_list_r[:k]
         return final
 
+'''
                 
 
 
