@@ -1,0 +1,24 @@
+# Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.
+
+# A consecutive sequence is a sequence of elements in which each element is exactly 1 greater than the previous element. The elements do not have to be consecutive in the original array.
+
+# You must write an algorithm that runs in O(n) time.
+
+
+
+def longestConsecutive(nums):
+        
+
+        s = set(nums)
+        final = 0
+        for i in range(len(nums)):
+            start, curr = 0,nums[i]
+            while curr in s:
+                  start += 1
+                  curr += 1
+            final = max(final, start)
+        return final    
+
+
+print(longestConsecutive(nums = [2,20,4,10,3,4,5])) # output 4
+print(longestConsecutive( nums = [0,3,2,5,4,6,1,1])) # output 7
