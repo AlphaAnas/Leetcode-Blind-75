@@ -21,6 +21,21 @@ def printList(head):
 
 def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
 
+        # ///////////////////////// unoptimized version (takes 45 ms and 7.9mb) /////////////////////////
+
+        prev = None
+        curr = head
+
+        while curr != None:
+              nxt = curr.next
+              curr.next = prev
+              prev = curr
+              curr = nxt
+            
+        return prev
+
+        '''
+        # //////////////////////// unoptimized version (takes 28ms and 8mb) ////////////////////////////
         if head == None:
               return []
         elif head.next == None: # only one element is same
@@ -70,6 +85,7 @@ def reverseList(head: Optional[ListNode]) -> Optional[ListNode]:
         printList(tail)
 
 
+        '''
 
 
 
