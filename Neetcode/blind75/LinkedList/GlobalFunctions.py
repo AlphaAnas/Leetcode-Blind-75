@@ -18,6 +18,7 @@ def makeLinkedList(list):
 
 def printList(head):
         if head is None:
+             print("[]")
              return []
         print("[")
         while head.next != None:
