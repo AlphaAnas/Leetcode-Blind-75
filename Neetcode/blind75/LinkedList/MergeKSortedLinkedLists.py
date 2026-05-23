@@ -7,8 +7,7 @@ def mergeTwoLists(list1, list2):
 
     curr = ListNode(-999)
     head = curr
-    printList(list1)
-    printList(list2)
+
     while list1 and list2:
         if list1.val < list2.val:
             head.next = list1
@@ -24,7 +23,7 @@ def mergeTwoLists(list1, list2):
     elif list2:
         head.next = list2
 
-    return head
+    return curr.next
 
 def mergeKLists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 
@@ -34,10 +33,11 @@ def mergeKLists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
             return None
         elif len(lists) == 1:
             return None
-        for i in range(len(lists)):
-            lists[i] = mergeTwoLists(lists[i], lists[i-1])
+        for i in range(1, len(lists)):
+            lists[0] = mergeTwoLists(lists[i], lists[0])
 
-        print(lists)
+
+        return lists[0]
 
         # /////////////////////////////// brute-force  ////////////////
         # final = []
@@ -62,7 +62,9 @@ def makeKlinkedLists(lists):
 
 lists = [[1,2,4],[1,3,5],[3,6]]
 l = makeKlinkedLists(lists)
-printList(mergeKLists(l)) # Output: [1,1,2,3,3,4,5,6]
+val = mergeKLists(l) # Output: [1,1,2,3,3,4,5,6]
+printList(val)
+
 
 
 # lists = []
