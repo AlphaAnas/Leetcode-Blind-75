@@ -1,0 +1,50 @@
+# Compiled Binary Files
+*.out
+*.exe
+*.so
+*.dll
+*.dylib
+dynamicArray
+
+# Object Files and Static Libraries
+*.o
+*.a
+*.obj
+
+# C++ Specific
+*.gch
+*.gcda
+*.gcno
+
+# IDE/Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build Directories
+build/
+bin/
+obj/
+debug/
+release/
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.bak
+temp/
+
+# OS Generated Files
+Thumbs.db
+ehthumbs.db
+
+# Dependency/App Files
+node_modules/
+.env
+*.pyc
+__pycache__/
+
+# C++ dynamic files
